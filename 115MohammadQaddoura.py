@@ -1,19 +1,19 @@
 #   a115_buggy_image.py
 import turtle as trtl
 
-x = trtl.Turtle()
-x.pensize(40)
-x.circle(20)
-w = 8
-y = 70
-z = 360 / w
-x.pensize(5)
-n = 0
-while (n < w):
-  x.goto(0,0)
-  x.setheading(z*n)
-  x.forward(y)
-  n = n + 1
-x.hideturtle()
+drawer = trtl.Turtle()
+drawer.pensize(40)
+drawer.circle(20)
+legs = 8
+leg_length = 70
+leg_space = 360 / legs
+drawer.pensize(5)
+count = 0
+while (count < legs):
+  drawer.goto(0,20)
+  drawer.setheading(leg_space*count)
+  drawer.forward(leg_length)
+  count = count + 1
+drawer.hideturtle()
 wn = trtl.Screen()
 wn.mainloop()
